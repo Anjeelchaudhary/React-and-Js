@@ -10,19 +10,6 @@ const UserContext = React.createContext();
 export default UserContext;
 ```
 
-#### # App -- wrapping all components with UserContextProvider
-
-```
-import UserContextProvider from './context/UserContextProvider'
-   return (
-    <UserContextProvider>
-      <div>React with anjeel</div>
-      <Login />
-      <Profile />
-    </UserContextProvider>
-  )
-```
-
 #### # UserContextProvider.jsx -- UserContext is component
 
 ```
@@ -37,6 +24,21 @@ const UserContextProvider = ({ children }) => {
 }
 
 export default UserContextProvider
+```
+
+### # above two components should be kept in contextComponent
+
+#### # App -- wrapping all components with UserContextProvider
+
+```
+import UserContextProvider from './context/UserContextProvider'
+   return (
+    <UserContextProvider>
+      <div>React with anjeel</div>
+      <Login />
+      <Profile />
+    </UserContextProvider>
+  )
 ```
 
 #### # givingInput from file login
