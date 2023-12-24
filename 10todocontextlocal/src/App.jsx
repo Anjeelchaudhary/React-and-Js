@@ -4,11 +4,25 @@ import { Todoprovider } from './context';
 
 function App() {
   const [todos, setTodos] = useState([]);
+
   const addTodo = (todo) => {
     setTodos((prev) => [...prev, { id: Date.now(), ...todo }])
   }
   const updateTodo = (id, todo) => {
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))
+
+    //for logic
+    // prev.map((eachValue) => {
+    //   if (eachValue.id === id) {
+    //     todo
+    //   } else {
+    //     eachValue
+    //   }
+    // })
+  }
+
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id))
   }
 
   return (
