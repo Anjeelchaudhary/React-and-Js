@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
+import { useTodo } from '../context/TodoContext';
 
 function TodoItem({ todo }) {
-    \
     const [isTodoEditable, setIsTodoEditable] = useState(false)
     const [todoMsg, setTodoMsg] = useState(todo.todo)
-    const { updateTodo, deleteTodo, toggleComplete } = useTodo
+    const { updateTodo, deleteTodo, toggleComplete } = useTodo()
 
     const editTodo = () => {
         updateTodo(todo.id, { ...todo, todo: todoMsg })
         setIsTodoEditable(false)
     }
-
     const toggleCompleted = () => {
         toggleComplete(todo.id)
     }
@@ -34,7 +33,6 @@ function TodoItem({ todo }) {
                 onChange={(e) => setTodoMsg(e.target.value)}
                 readOnly={!isTodoEditable}
             />
-            {/* Edit, Save Button */}
             <button
                 className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50"
                 onClick={() => {
@@ -48,7 +46,6 @@ function TodoItem({ todo }) {
             >
                 {isTodoEditable ? "📁" : "✏️"}
             </button>
-            {/* Delete Todo Button */}
             <button
                 className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
                 onClick={() => deleteTodo(todo.id)}

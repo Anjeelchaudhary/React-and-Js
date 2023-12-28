@@ -18,4 +18,4 @@ export const useTodo = () => {
     return useContext(Todocontext)
 }
 
-export const Todoprovider = Todocontext.Provider
+export const TodoProvider = Todocontext.Provider
