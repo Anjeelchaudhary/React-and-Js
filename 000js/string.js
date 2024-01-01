@@ -3,7 +3,7 @@ const age = 21
 
 // console.log(`Hello I am ${myName} and I am currently ${age} yrs old`)
 
-const gameName = new String("anjeel")
+const gameName = new String("anjeel-chaudhary-se")
 // console.log(gameName)
 // console.log(gameName.length)
 // console.log(gameName.toUpperCase())
@@ -24,4 +24,10 @@ const newString1 = "    anjeel     "
 
 //.replace(ekarSatta,eolaSe)
 const url = "https://anjeel.com/anjeel%10chaudhary"
-console.log(url.replace('%10', '-'))
+// console.log(url.replace('%10', '-'))
+
+//.includes = for asking question ki e subject ba ki nai 
+// console.log(url.includes('anjeel'))
+
+//makes array
+// console.log(gameName.split('-'))
