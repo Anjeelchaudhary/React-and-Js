@@ -18,4 +18,4 @@ let myCreatdDate = new Date("2023-01-23")
 //quiz, poles , kihin fastest anser dehal ba to  oukin winner banau
 //atna bela timestam method use karna 
 let myTimeStamp = Date.now()
-console.log(myTimeStamp)
+// console.log(myTimeStamp)
