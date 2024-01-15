@@ -68,3 +68,32 @@ for (const key in myObject) {
 //ema value he nikareklak objectname[aniYahaConst me banail ola variabel]
 //ani key he nikarek lak jun sidda for in me banail ola const k variable nau likhna
 
+//=========================================================================
+//sab se bawal foreach loop
+const coding = ["js", "ruby", "java", "python", "cpp"]
+coding.forEach((item, index, arr) => {
+    console.log(item, index, arr);
+})
+
+//for each loop me 3 parameter pass huit jama 1st ola key rahat 2nd ola index number rahat ani 3rd ola jun jammu array rahat
+
+
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName: "js"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "py"
+    },
+]
+
+myCoding.forEach((item) => {
+
+    console.log(item.languageName);
+})
