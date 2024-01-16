@@ -64,4 +64,26 @@ const newNums = myNumers
     .map((num) => num + 1)
     .filter((num) => num >= 40)
 
-console.log(newNums);
+// console.log(newNums);
+
+//==========================================================================================================================
+//reduce()
+const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+//reduce() 2 tho parameter lehat suru k parameter k initial value dehek parat jo hamre coma kar k debi
+//ani 2nd ola parameter jun array k value rahii
+//ani 1st ola parater 2nd cho me 1st ola parameter k ani 2nd ola paramter k result rahihi 
+
+const morTotal = myNumbers.reduce((acc, currVal) => acc + currVal, 0)
+// console.log(morTotal);
+
+const shooppingCart = [
+    { product: 'Laptop', price: 130000 },
+    { product: 'mobile', price: 65000 },
+    { product: 'watch ', price: 10000 },
+    { product: 'cloth', price: 25000 },
+    { product: 'watch', price: 12000 },
+]
+
+const totalMoney = shooppingCart.reduce((accu, item) => (accu + item.price), 0)
+console.log(totalMoney);
