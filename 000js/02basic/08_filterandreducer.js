@@ -47,4 +47,21 @@ const books = [
 const bookName = books.filter((pustak) => pustak.publish === 1986)
 const bookT = books.filter((pus) => (pus.title === 'Book Four'))
 const bookP = books.filter((pustkalay) => { return pustkalay.publish >= 1995 && pustkalay.genre === 'History' })
-console.log(bookP);
+// console.log(bookP);
+
+
+//==========================================================================================================================
+//map()
+
+const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const newNums = myNumers.map( (num) => { return num + 10})
+
+const newNums = myNumers
+
+    //yaha ek map lagail rahbo oukar answer 2nd ola map me paii  tan add 1 karal ola value filter me jaii
+    .map((num) => num * 10)
+    .map((num) => num + 1)
+    .filter((num) => num >= 40)
+
+console.log(newNums);
