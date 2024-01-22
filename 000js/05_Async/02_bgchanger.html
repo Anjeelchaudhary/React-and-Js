@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-kalo" style="background-color:#212121; color: #ffff; ">
+   <div>
+    <h1>This is practice platform</h1>
+    <button id="startMe">start</button>
+    <button id="stopMe">stop</button>
+   </div>
+</body>
+<script>
+    const generatedColor = () => {
+        const hex = '0123456789ABCDEF';
+        let colors = '#'
+        console.log(colors)
+        for(let i =0; i < 6;i++) {
+            colors += hex[Math.floor(Math.random() * 16)]
+        }
+        return colors;
+    };
+    console.log(generatedColor)
+
+    // setInterval(generatedColor,3000)
+
+//    document.querySelector('#startMe').addEventListener('click', () => {
+//     generatedColor()
+//     console.log('startButton clicked')
+//    });
+//    document.querySelector('#stopMe').addEventListener('click', () => {
+//     console.log('stoppedButton Clicked')
+// });
+</script>
+</html>

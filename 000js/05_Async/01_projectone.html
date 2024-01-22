@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>me and my code</title>
+</head>
+<body>
+    <h1>myCode - base</h1>
+    <button id="stopMe">click Me to stop</button>
+</body>
+<script>
+    const sayMyName = () => {console.log("i am anjeel")}
+    const stop = setInterval(sayMyName ,3000)
+    document.querySelector('#stopMe').addEventListener('click',() => {
+        clearInterval(stop);
+        console.log('Stooppedd')
+    })
+</script>
+</html>
