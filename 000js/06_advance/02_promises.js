@@ -1,5 +1,7 @@
 // new Promise(function (haKardem, naikarnuu) { })
 
+const { get } = require("mongoose")
+
 //syntax one
 const promishOne = new Promise(function (resolve, reject) {
     setTimeout(function () {
@@ -55,3 +57,52 @@ new Promise((resolve, reject) => {
         console.log("I am true")
     })
     .catch(() => console.log("i am false"))
+    .finally(() => console.log("something work done"))
+
+
+////////////=======================================================================================
+// const promiseFive = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         const descision = false
+//         if (!descision) {
+//             console.log("I am promise four")
+//             resolve()
+//         } else {
+//             console.log("something went wrong")
+//             reject()
+//         }
+//     }, 1000)
+// })
+
+// async function consumePromiseFive() {
+//     try {
+//         const response = await promiseFive   ///yaha par promiseFive ek object ho 
+//         console.log(response)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+
+
+
+//using async ani await
+// async function gettingAllUser() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data = await response.json()
+//         console.log(data)
+//     } catch (error) {
+//         console.log("error :=", error)
+//     }
+// }
+// gettingAllUser()
+
+// using dot then and dot catch 
+
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then((users) => {
+        return users.json()
+    })
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error))
