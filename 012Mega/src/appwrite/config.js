@@ -81,7 +81,7 @@ export class Service {
     //athe k queries kana suruk ola variable ho 
     //jab custom db banail rahbo ta status kana ola key banail rahbo ouhai lehat e
     //ani e appwrite ola hukre fe status kana key banail batai
-    async getPosts(queries = [Query.equal("status", "avtive")]) {
+    async getPosts(queries = [Query.equal("status", "active")]) {
         try {
             await this.Databases.getDocument(
                 conf.appwriteDatabaseId,
