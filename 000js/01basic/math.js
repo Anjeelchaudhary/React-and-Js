@@ -21,4 +21,4 @@ const hello = 1000000
 // console.log(Math)
 //.abs() e ola method -ve ola value se +ve me convert kardehat
 // console.log(Math.abs(-5))
-console.log(Math.round(4.5))
+// console.log(Math.round(4.5))

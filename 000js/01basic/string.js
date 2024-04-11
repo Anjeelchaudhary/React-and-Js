@@ -20,7 +20,7 @@ const doubleString = gameName.slice(-6, 3)
 
 //removing space use trim()
 const newString1 = "    anjeel     "
-// console.log(newString1.trim())
+console.log(newString1.trim())
 
 //.replace(ekarSatta,eolaSe)
 const url = "https://anjeel.com/anjeel%10chaudhary"
