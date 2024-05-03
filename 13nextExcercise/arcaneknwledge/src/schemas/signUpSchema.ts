@@ -1,5 +1,5 @@
 //2nd step
-import {string, z} from 'zod';
+import {z} from 'zod';
 
 //validation with zod 
 
