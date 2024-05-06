@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
 
+
+//e dbConnect kana ola file har ek route me lagi har ek route me kaheki nextJs edge me chalat
+
 type ConnectionObject = {
     isConnected?: number
 }
