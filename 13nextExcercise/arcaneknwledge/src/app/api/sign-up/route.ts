@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs'
 import { sendVerificationEmail } from "@/helpers/sendVerificationEmail";
 
 //yeady ehe mai express me kartu ta routes bataik parat for eg.
-// /api/signUp/.. jaisin url mano yaha e apihi define kardehat. 
+// /api/signUp/.. jaisin url mano yaha e apihi define kardehat.
 // i.e /api/sign-up/
 
 export async function POST(request: Request ) {
@@ -33,25 +33,25 @@ export async function POST(request: Request ) {
             //     message: "Already Email taken",
             // },{
             //     status: 400,
-            // })
+            // })  TODO:
         }else {
             const hashPassword = await bcrypt.hash(passowrd,10)
 
             // athe par e new ola keyword expiryDate me object reference karataa 
-            // so expiryDate me ek time set karnu by expiryDate.setHours() tab
+            // so expiryDate me ek time set karnu by expiryDate.setHours() tab   
             // ouhai set karal ola manse getHours kar k add 1 kardenu   
             const expiryDate = new Date()
             expiryDate.setHours(expiryDate.getHours() + 1)
 
             new UserModel({
-                // userName,
-                // email,
-                // password: hasedPassword,
-                // verifyCode: string,
-                // verifyCodeExpiry: Date,
-                // isVerified: boolean,
-                // isAcceptingMessage: boolean,
-                // messages: Message [],
+                userName,
+                email,
+                password: hasedPassword,
+                verifyCode: string,
+                verifyCodeExpiry: Date,
+                isVerified: boolean,
+                isAcceptingMessage: boolean,
+                messages: Message [],
             })
         }
     } catch (error) {
