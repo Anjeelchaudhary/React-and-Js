@@ -44,14 +44,14 @@ export async function POST(request: Request ) {
             expiryDate.setHours(expiryDate.getHours() + 1)
 
             new UserModel({
-                userName,
-                email,
-                password: hasedPassword,
-                verifyCode: string,
-                verifyCodeExpiry: Date,
-                isVerified: boolean,
-                isAcceptingMessage: boolean,
-                messages: Message [],
+                // userName,
+                // email,
+                // password: hasedPassword,
+                // verifyCode: string,
+                // verifyCodeExpiry: Date,
+                // isVerified: boolean,
+                // isAcceptingMessage: boolean,
+                // messages: Message [],
             })
         }
     } catch (error) {
